@@ -60,4 +60,4 @@ if __name__ == '__main__':
     cert_file = os.getenv('SSL_CERT_FILE', 'certs/server.crt')
     key_file = os.getenv('SSL_KEY_FILE', 'certs/server.key')
   
-    app.run(ssl_context=(cert_file, key_file), port=443)
+    app.run(ssl_context=(cert_file, key_file),host='0.0.0.0',port=443)
