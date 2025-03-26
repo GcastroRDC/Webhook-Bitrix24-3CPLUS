@@ -13,7 +13,7 @@ def getToken(clientRequest):
             return parts[1]  # Retorna o token com a origem 'header'
     
     # Obtem o token dos parâmetros da query string
-    tokenQuery = clientRequest.args.get('token')
+    tokenQuery = clientRequest.args.get('auth')
 
     if tokenQuery:
 
