@@ -24,7 +24,7 @@ def handleError(message, statusCode):
 @app.route('/webhook/3cplus/call.was.connected', methods=['POST'])
 def callWasConnected():
     
-    tokenRequest = request.args.get('auth')
+    tokenRequest = getToken(request)
     dataVerifyToken = verifyToken(tokenRequest)
 
     if not dataVerifyToken['status']:
@@ -41,7 +41,7 @@ def callWasConnected():
 @app.route('/webhook/3cplus/call.history.was.created', methods=['POST'])
 def callHistoryWasCreated():
 
-    tokenRequest = request.args.get('auth')
+    tokenRequest =  getToken(request)
     dataVerifyToken = verifyToken(tokenRequest)
 
     if not dataVerifyToken['status']:
