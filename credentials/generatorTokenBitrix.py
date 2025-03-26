@@ -13,7 +13,7 @@ def generatorAccessToken():
             with open(f"{pathToken}","r") as arquivo:
                        refresh_token_Base = arquivo.read() 
             
-            link = f'{endpoint}client_id={client_id}&grant_type=refresh_token&client_secret={secret_id}&redirect_uri=http%3A%2F%2Ftest.com%2Fbitrix%2Foauth%2Foauth_test.php&refresh_token={refresh_token_Base}' 
+            link = f'{endpoint}client_id={client_id}&grant_type=refresh_token&client_secret={secret_id}&refresh_token={refresh_token_Base}' 
 
             response = requests.get(link)
             data = response.json()
