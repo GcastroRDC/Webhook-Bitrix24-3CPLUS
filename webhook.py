@@ -47,7 +47,11 @@ def callHistoryWasCreated():
          
          return handleError(dataVerifyToken['message'], dataVerifyToken['codeErro'])
     
-    result = ServiceWebhookCallWasConnected(request.get_json(),tokenBitrix,token3cPlus)
+    result = ServiceWebhookCallWasConnected(
+        request.get_json(),
+        tokenBitrix,
+        token3cPlus
+    )
 
     return result
 
