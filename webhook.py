@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 import os
 from Security.verifyToken import verifyToken
+from Security.getToken import getToken
 from Service.ServiceWebhookCallWasConnected import ServiceWebhookCallWasConnected
 from Service.ServiceWebhookCallWasConnected import ServiceWebhookCallWasConnected
 from sqlite.getConnectionDatabase import getConnectionDatabase
