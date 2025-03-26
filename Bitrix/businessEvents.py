@@ -10,7 +10,7 @@ logging.basicConfig(
 
 def HandleFields(tokenBitrix,idDeal,stageId,categoryId,qualificationId):
 
-      endpointCrmDealUpdate = f"https://dominio/rest/crm.deal.update?auth={tokenBitrix}&ID={idDeal}"
+      endpointCrmDealUpdate = f"https://dominio.bitrix24.com.br/rest/crm.deal.update?auth={tokenBitrix}&ID={idDeal}"
             
       headers = {
                 
