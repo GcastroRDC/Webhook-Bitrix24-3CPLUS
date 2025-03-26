@@ -20,7 +20,7 @@ def handleError(message, statusCode):
 
     return jsonify({"error": message}), statusCode
 
-@app.route('/tradscorretora/webhook/3cplus/call.was.connected', methods=['POST'])
+@app.route('/webhook/3cplus/call.was.connected', methods=['POST'])
 def callWasConnected():
     
     tokenRequest = request.args.get('auth')
@@ -37,7 +37,7 @@ def callWasConnected():
     
     return result
 
-@app.route('/tradscorretora/webhook/3cplus/call.history.was.created', methods=['POST'])
+@app.route('/webhook/3cplus/call.history.was.created', methods=['POST'])
 def callHistoryWasCreated():
 
     tokenRequest = request.args.get('auth')
